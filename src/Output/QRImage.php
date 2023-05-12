@@ -87,6 +87,23 @@ class QRImage extends QROutputAbstract{
 
 	}
 
+    /**
+     * @return int
+     */
+    public function getLength(): int
+    {
+        return $this->length;
+    }
+
+    /**
+     * Set length img
+     * @return void
+     */
+    public function setLength($value): void
+    {
+        $this->length = $value;
+    }
+
 	/**
 	 * @inheritDoc
 	 *
@@ -96,6 +113,10 @@ class QRImage extends QROutputAbstract{
 	 */
 	public function dump(string $file = null){
 		$file ??= $this->options->cachefile;
+
+        if ($this->length === 0) {
+            $this->setLength(155);
+        }
 
 		$this->image = imagecreatetruecolor($this->length, $this->length);
 
