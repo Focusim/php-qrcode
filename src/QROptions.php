@@ -32,6 +32,8 @@ use chillerlan\Settings\SettingsContainerAbstract;
  * @property int         $scale
  * @property string      $cssClass
  * @property float       $svgOpacity
+ * @property int         $svgWidth
+ * @property int         $svgHeight
  * @property string      $svgDefs
  * @property int         $svgViewBoxSize
  * @property string      $textDark
