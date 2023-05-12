@@ -89,8 +89,11 @@ class QRMarkup extends QROutputAbstract{
 	 */
 	protected function svg(string $file = null):string{
 		$matrix = $this->matrix->matrix();
+        $width  = $this->options->svgWidth;
+        $height  = $this->options->svgHeight;
+        $svgHeader = '<svg xmlns="http://www.w3.org/2000/svg" width="'.$width.'px" height="'.$height.'px" viewBox="0 0 %2$d %2$d">';
 
-		$svg = sprintf($this->svgHeader, $this->options->cssClass, $this->options->svgViewBoxSize ?? $this->moduleCount)
+        $svg = sprintf($svgHeader, $this->options->cssClass, $this->options->svgViewBoxSize ?? $this->moduleCount)
 		       .$this->options->eol
 		       .'<defs>'.$this->options->svgDefs.'</defs>'
 		       .$this->options->eol;

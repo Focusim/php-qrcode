@@ -121,6 +121,16 @@ trait QROptionsTrait{
 	 */
 	protected float $svgOpacity = 1.0;
 
+    /**
+     * SVG width size.
+     */
+    protected ?int $svgWidth = null;
+
+    /**
+     * SVG height size.
+     */
+    protected ?int $svgHeight = null;
+
 	/**
 	 * anything between <defs>
 	 *
