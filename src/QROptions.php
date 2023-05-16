@@ -29,7 +29,7 @@ use chillerlan\Settings\SettingsContainerAbstract;
  * @property string|null $outputInterface
  * @property string|null $cachefile
  * @property string      $eol
- * @property int         $scale
+ * @property float       $scale
  * @property string      $cssClass
  * @property float       $svgOpacity
  * @property int         $svgWidth

@@ -64,7 +64,7 @@ try{
 	$qro->quietzoneSize    = (int)$_POST['quietzonesize'];
 	$qro->moduleValues     = $moduleValues;
 	$qro->outputType       = $_POST['output_type'];
-	$qro->scale            = (int)$_POST['scale'];
+	$qro->scale            = (float)$_POST['scale'];
 	$qro->imageTransparent = false;
 
 	$qrcode = (new QRCode($qro))->render($_POST['inputstring']);

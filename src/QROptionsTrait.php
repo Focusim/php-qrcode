@@ -109,7 +109,7 @@ trait QROptionsTrait{
 	/**
 	 * size of a QR code pixel [SVG, IMAGE_*], HTML via CSS
 	 */
-	protected int $scale = 5;
+	protected float $scale = 5;
 
 	/**
 	 * a common css class

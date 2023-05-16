@@ -46,7 +46,7 @@ abstract class QROutputAbstract implements QROutputInterface{
 	 *
 	 * @see \chillerlan\QRCode\QROptions::$scale
 	 */
-	protected int $scale;
+	protected float $scale;
 
 	/**
 	 * the side length of the QR image (modules * scale)
